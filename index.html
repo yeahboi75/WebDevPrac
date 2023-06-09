@@ -6,27 +6,65 @@
   <meta name="author" content="Neo Smith">
   <meta name="description" content="Learning HTML">
   <title>My First Webpage</title>
+  <!---Relative Reference-->
   <link rel="icon" href="html5.png" type="image/x-icon">
   <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 
 <body>
-  <h1>Hello World!</h1>
+  <h1>My Goals for the Year</h1>
 
   <hr>
 
+  <nav>
+      <ul>
+        <li>
+          <!---Internal Reference-->
+          <a href="#html">Learning HTML</a>
+        </li>
+
+        <li>
+          <!---Internal Reference-->
+          <a href="#vacation">Planning a Vacation</a>
+        </li>
+      </ul>
+  </nav>
+
+  <hr>
+  <!---Internal Reference-->
+  <section id="html">
   <h2>I'm Ready To Learn HTML</h2>
     <p>This is my first webpage</p>
+    <!---Relative image Reference-->
+    <figure>
+    <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300">
 
+    <figcaption>
+        An Example of HTML5 code
+        <p>
+          <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+          <br>
+          <br>
+          <code>&lt;p&gt;console.log("Hello World!")&lt;/p&gt;</code>
+        </p>
+    </figcaption>
+
+   </figure>
   <h3>My Daily Schedule</h3>
     <p>Let me tell you how:</p>
       <ol>
         <li>...I learn more about web dev.</li>
         <li>...I plant out my schedule.</li>
-        <li>...I use my resources from <abbr title="The Mozilla Developer Network">MDN</abbr>.</li>
+        <!---Absolute Reference-->
+        <li>...I use my resources from <abbr title="The Mozilla Developer Network"</abbr>
+          <a href="https://developer.mozilla.org/">MDN</a>
+        </abbr>.</li>
       </ol>
+  </section>
   <hr>
 
+  <!---Internal Reference-->
+  <section id="vacation">
   <h2>I Am Also Planning a Vacation</h2>
       <p>I've been working hard and <em>really need a getaway.</em></p>
       <p>I live in <abbr title="Kansas city">KS</abbr> so I want to visit a beach.</p>
@@ -35,9 +73,28 @@
       <ul>
          <li>
             <p>I've heard good things about the Carribean.</p>
-            <li>I've heard good things about going here:</li>
+            <figure>
+            <!---Relative Image Reference-->
+            <img src="img/caribbean.jpg" alt="Carribean beach" title="I want to visit a Carribean beach." width="400" height="225" loading="lazy" ><!---For Performance-->
+            <figcaption>
+                Carribean beach getaway
+            </figcaption>
+          </figure>
+        </li>
+
+        <li>
+              I've heard good things about going here:
+        </li>
               <br><address>Margaritaville Island Reserve Rivera Cancun Bahia Petempich Puerto Morelos, Mexico Colonia Morelos, Mexico 77580</address>
-         </li> 
+              <figure>
+              <img src="img/vacation.jpg" alt="Cancun Vacation" title="It's 5 o'Clock Somewhere" loading="lazy" width="400" height="267">
+              
+              <figcaption>
+                Carribean Vacation Image
+              </figcaption>
+
+              </figure>
+        </li> 
      </ul>
      <h3>Places I want to Avoid</h3>
       <dl>
@@ -50,8 +107,12 @@
           <dt>Mountain tops</dt>
           <dd>These are also cold.</dd>
       </dl>
+  </section>
   <hr>
-
-  &lt;&lt;&lt; &copy; Neo Smith &gt;&gt;&gt;
-</body>&gt;
+  <!---Relative Reference-->
+  &lt;&lt;&lt; &copy; <a href="about.html">Smith</a> &gt;&gt;&gt;
+<p>
+  <a href="#">Back To Top</a>
+</p>
+</body>
 </html>
